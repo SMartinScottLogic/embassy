@@ -76,10 +76,10 @@ async fn main(_spawner: Spawner) {
     let driver = Driver::new(p.USB, irq);
 
     // Create embassy-usb Config
-    let mut config = embassy_usb::Config::new(0xc0de, 0xcafe);
-    config.manufacturer = Some("Embassy");
-    config.product = Some("MSC example");
-    config.serial_number = Some("12345678");
+    let mut config = embassy_usb::Config::new(0xabcd, 0xabcd);
+    config.manufacturer = Some("Chris Price");
+    config.product = Some("100k of your finest bytes");
+    config.serial_number = Some("CP4096OYFB");
 
     // Required for windows compatiblity.
     // https://developer.nordicsemi.com/nRF_Connect_SDK/doc/1.9.1/kconfig/CONFIG_CDC_ACM_IAD.html#help
